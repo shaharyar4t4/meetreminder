@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meetreminder/screen/auth/view_signup.dart';
 import 'package:meetreminder/screen/services/auth_services.dart';
 
 class VeiwLogin extends StatefulWidget {
@@ -171,7 +172,7 @@ class _VeiwLoginState extends State<VeiwLogin> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF4a65ff),
-                    minimumSize: Size(300, 40),
+                    minimumSize: Size(300, 60),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
                     ),
@@ -196,10 +197,10 @@ class _VeiwLoginState extends State<VeiwLogin> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => ViewSignup()),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ViewSignup()),
+                      );
                     },
                     child: Text(
                       "Sign up",
