@@ -22,10 +22,10 @@ class _VeiwLoginState extends State<VeiwLogin> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 10),
+              SizedBox(height: 12),
               Center(
                 child: Image.asset(
-                  'assets/image/Group.png',
+                  'assets/image/login.png',
                   width: 170,
                   height: 170,
                 ),
@@ -170,8 +170,8 @@ class _VeiwLoginState extends State<VeiwLogin> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.tealAccent,
-                    minimumSize: Size(300, 65),
+                    backgroundColor: Color(0xFF4a65ff),
+                    minimumSize: Size(300, 40),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
                     ),
