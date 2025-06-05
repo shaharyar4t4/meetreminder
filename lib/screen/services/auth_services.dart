@@ -10,14 +10,14 @@ class AuthServices {
         email: email.trim(),
         password: password.trim(),
       );
-      return "success"; // Return success message if login is successful
+      return "success";
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         return 'No user found for that email.';
       } else if (e.code == 'wrong-password') {
         return 'Wrong password provided.';
       } else {
-        return e.message; // Return other Firebase errors
+        return e.message;
       }
     }
   }
@@ -29,13 +29,18 @@ class AuthServices {
         email: email.trim(),
         password: password.trim(),
       );
-      return "success"; // Return success message if registration is successful
+      return "success";
     } on FirebaseAuthException catch (e) {
       if (e.code == 'email-already-in-use') {
         return 'The account already exists for that email.';
       } else {
-        return e.message; // Return other Firebase errors
+        return e.message;
       }
     }
+  }
+
+  // for Logout
+  Future<void> logout() async {
+    await _auth.signOut();
   }
 }

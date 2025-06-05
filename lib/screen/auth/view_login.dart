@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meetreminder/screen/auth/view_signup.dart';
+import 'package:meetreminder/screen/home/view_dashbored.dart';
 import 'package:meetreminder/screen/services/auth_services.dart';
 
 class VeiwLogin extends StatefulWidget {
@@ -153,10 +154,12 @@ class _VeiwLoginState extends State<VeiwLogin> {
                         ),
                       );
                       // Navigate to Home Page if login is successful
-                      // Navigator.pushReplacement(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => ViewHome()),
-                      // );
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ViewDashbored(),
+                        ),
+                      );
                     } else {
                       // Show error message if login fails
                       ScaffoldMessenger.of(context).showSnackBar(

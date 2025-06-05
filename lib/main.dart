@@ -4,6 +4,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meetreminder/firebase_options.dart';
 import 'package:meetreminder/screen/auth/view_login.dart';
+import 'package:meetreminder/screen/services/auth_wrapper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: VeiwLogin(),
+      home: AuthWrapper(),
     );
   }
 }
